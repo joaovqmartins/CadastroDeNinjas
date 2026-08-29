@@ -4,11 +4,15 @@ package dev.java10x.CadastroDeNinjas.Ninjas;
 
 import dev.java10x.CadastroDeNinjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Entity
 @Table(name = "tb_cadastro")
+@NoArgsConstructor
+@AllArgsConstructor
 public class NinjaModel {
 
     @Id
@@ -17,6 +21,7 @@ public class NinjaModel {
 
     private String nome;
 
+    @Column(unique = true)
     private String email;
 
     private int idade;
@@ -26,12 +31,5 @@ public class NinjaModel {
     private MissoesModel missoesModel;
 
 
-    public NinjaModel() {
-    }
 
-    public NinjaModel(String nome, String email, int idade) {
-        this.nome = nome;
-        this.email = email;
-        this.idade = idade;
-    }
 }
