@@ -1,9 +1,8 @@
-package dev.java10x.CadastroDeNinjas.Model.Ninjas;
+package dev.java10x.CadastroDeNinjas.Model;
 
 //TODO: Adicionar padrão de projeto.
 
 
-import dev.java10x.CadastroDeNinjas.Model.Missoes.MissoesModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -12,8 +11,7 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "tb_cadastro")
-@NoArgsConstructor
-@AllArgsConstructor
+
 @Getter
 @Setter
 public class NinjaModel {
@@ -33,8 +31,12 @@ public class NinjaModel {
     @Column(name = "img_url")
     private String imaUrl;
 
+    @Column(name = "rank")
+    private String rank;
+
     @Column(name = "idade")
     private int idade;
+
 
     // @ManyToOne - Um ninja tem uma unica missao
     @ManyToOne
