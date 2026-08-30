@@ -23,7 +23,7 @@ public class MissoesModel {
     @Column(name = "dificuldade")
     private String dificuldade;
 
-    @OneToMany(mappedBy = "missoes")
+    @OneToMany(mappedBy = "missoesModel")
     private List<NinjaModel> ninja;
 
 
